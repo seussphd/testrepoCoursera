@@ -1,0 +1,50 @@
+Final_Python Australia Weather, evaluate machine learning models
+
+
+
+
+NOte 1.
+
+Data leakage considerations
+Consider the descriptions above for the columns in the data set. Are there any practical limitations to being able to predict whether it will rain tomorrow given the available data?
+
+Points to note - 1
+List some of the features that would be inefficient in predicting tomorrow's rainfall. There will be a question in the quiz that follows based on this observation.
+
+Consider features that rely on the entire duration of today for their evaluation.
+
+
+
+
+
+Note 2.
+*True positive* (recall) is 51%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          No       0.86      0.95      0.90      1154
+         Yes       0.75      0.51      0.61       358
+
+    accuracy                           0.84      1512
+   macro avg       0.81      0.73      0.76      1512
+weighted avg       0.84      0.84      0.83      1512
+
+
+from the Confusion Matrix
+
+For a binary classifier, the confusion matrix layout is:
+
+[ TN  FP ]
+[ FN  TP ]
+
+
+TPR = TP / (TP + FN)
+
+184 / (184 + 174) = 0.5139
+
+
+
+Note 3.
+
+Most important feature is Humidity at 3pm.  This is about 0.14 importance score.
